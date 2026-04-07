@@ -1,0 +1,14 @@
+# robots.txt for ThesisFlow by MIGRI Technologies
+
+User-agent: *
+Allow: /
+Disallow: /admin
+Disallow: /admin/*
+Disallow: /admin-dashboard
+Disallow: /api/
+
+# Sitemap location
+Sitemap: https://thesisflow.com/sitemap.xml
+
+# Crawl-delay for good practices
+Crawl-delay: 1

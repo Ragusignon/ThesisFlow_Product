@@ -1,0 +1,409 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800&display=swap');
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --font-family: 'Nunito', sans-serif;
+  --font-size: 16px;
+  
+  /* Font Sizes */
+  --text-xs: 0.75rem;    /* 14px */
+  --text-sm: 1rem;       /* 16px - increased from 14px (0.875rem) */
+  --text-base: 1rem;     /* 16px */
+  --text-lg: 1.125rem;   /* 18px */
+  --text-xl: 1.25rem;    /* 20px */
+  --text-2xl: 1.5rem;    /* 24px */
+  --text-3xl: 1.875rem;  /* 30px */
+  --text-4xl: 2.25rem;   /* 36px */
+  --text-5xl: 3rem;      /* 48px */
+  --text-6xl: 3.75rem;   /* 60px */
+  
+  /* Brand Colors */
+  --teal: #00A7A5;
+  --teal-dark: #008f8d;
+  --teal-light: #e6f7f7;
+  --teal-lighter: #f0fafa;
+  
+  /* Light Theme */
+  --background: #ffffff;
+  --foreground: #1a1a1a;
+  --card: #ffffff;
+  --card-foreground: #1a1a1a;
+  --popover: #ffffff;
+  --popover-foreground: #1a1a1a;
+  --primary: #00A7A5;
+  --primary-foreground: #ffffff;
+  --secondary: #f5f5f5;
+  --secondary-foreground: #1a1a1a;
+  --muted: #f5f5f5;
+  --muted-foreground: #737373;
+  --accent: #f5f5f5;
+  --accent-foreground: #1a1a1a;
+  --destructive: #ef4444;
+  --destructive-foreground: #ffffff;
+  --border: #e5e5e5;
+  --input: #e5e5e5;
+  --input-background: #f9f9f9;
+  --switch-background: #e5e5e5;
+  --ring: #00A7A5;
+  
+  /* Semantic Colors for Light Theme */
+  --text-primary: #1a1a1a;
+  --text-secondary: #525252;
+  --text-tertiary: #737373;
+  --text-brand: #00A7A5;
+  --text-on-brand: #ffffff;
+  
+  --bg-primary: #ffffff;
+  --bg-secondary: #fafafa;
+  --bg-tertiary: #f5f5f5;
+  --bg-brand: #00A7A5;
+  --bg-brand-hover: #008f8d;
+  --bg-brand-subtle: rgba(0, 167, 165, 0.05);
+  --bg-brand-subtle-hover: rgba(0, 167, 165, 0.1);
+  
+  --border-primary: #e5e5e5;
+  --border-secondary: #d4d4d4;
+  --border-brand: #00A7A5;
+  --border-brand-subtle: rgba(0, 167, 165, 0.2);
+  
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+  --shadow-brand: 0 10px 15px -3px rgba(0, 167, 165, 0.2);
+  
+  /* Ultra-Subtle Premium Gradients for Light Theme */
+  --gradient-brand: linear-gradient(135deg, #00A7A5 0%, #008f8d 100%);
+  
+  /* Barely visible mesh gradients - luxury tech feel */
+  --gradient-mesh-1: radial-gradient(circle at 20% 30%, rgba(0, 167, 165, 0.02) 0%, transparent 50%),
+                      radial-gradient(circle at 80% 70%, rgba(0, 167, 165, 0.015) 0%, transparent 50%);
+  
+  --gradient-mesh-2: radial-gradient(circle at 50% 0%, rgba(0, 167, 165, 0.025) 0%, transparent 40%),
+                      radial-gradient(circle at 100% 100%, rgba(0, 167, 165, 0.015) 0%, transparent 40%);
+  
+  --gradient-mesh-3: radial-gradient(ellipse at 0% 0%, rgba(0, 167, 165, 0.02) 0%, transparent 60%),
+                      radial-gradient(ellipse at 100% 100%, rgba(0, 167, 165, 0.02) 0%, transparent 60%);
+  
+  /* Soft directional gradients */
+  --gradient-subtle-top: linear-gradient(180deg, rgba(0, 167, 165, 0.015) 0%, transparent 100%);
+  --gradient-subtle-bottom: linear-gradient(0deg, rgba(0, 167, 165, 0.015) 0%, transparent 100%);
+  
+  /* Combined ultra-subtle background gradients */
+  --gradient-bg-subtle: radial-gradient(circle at 20% 20%, rgba(0, 167, 165, 0.02) 0%, transparent 50%),
+                         radial-gradient(circle at 80% 80%, rgba(0, 167, 165, 0.015) 0%, transparent 50%),
+                         linear-gradient(180deg, #ffffff 0%, rgba(250, 250, 250, 0.8) 100%);
+  
+  --gradient-bg-secondary: radial-gradient(circle at 50% 0%, rgba(0, 167, 165, 0.02) 0%, transparent 40%),
+                            linear-gradient(180deg, #fafafa 0%, rgba(255, 255, 255, 0.5) 100%);
+  
+  --gradient-bg-card: radial-gradient(circle at 100% 0%, rgba(0, 167, 165, 0.015) 0%, transparent 50%),
+                       linear-gradient(180deg, #ffffff 0%, rgba(250, 250, 250, 0.3) 100%);
+  
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --radius: 0.625rem;
+  
+  /* Chart colors */
+  --chart-1: oklch(0.646 0.222 41.116);
+  --chart-2: oklch(0.6 0.118 184.704);
+  --chart-3: oklch(0.398 0.07 227.392);
+  --chart-4: oklch(0.828 0.189 84.429);
+  --chart-5: oklch(0.769 0.188 70.08);
+  
+  /* Sidebar */
+  --sidebar: #fafafa;
+  --sidebar-foreground: #1a1a1a;
+  --sidebar-primary: #1a1a1a;
+  --sidebar-primary-foreground: #fafafa;
+  --sidebar-accent: #f5f5f5;
+  --sidebar-accent-foreground: #1a1a1a;
+  --sidebar-border: #e5e5e5;
+  --sidebar-ring: #00A7A5;
+  
+  /* Logo fill color for light mode */
+  --fill-0: #1a1a1a;
+}
+
+.dark {
+  /* World-Class Premium Dark Theme - Rich Depth with Luminous Teal Accents */
+  --background: #0d1117;
+  --foreground: #f0f6fc;
+  --card: #161b22;
+  --card-foreground: #f0f6fc;
+  --popover: #161b22;
+  --popover-foreground: #f0f6fc;
+  --primary: #00A7A5;
+  --primary-foreground: #ffffff;
+  --secondary: #21262d;
+  --secondary-foreground: #f0f6fc;
+  --muted: #21262d;
+  --muted-foreground: #adbac7;
+  --accent: #1c2128;
+  --accent-foreground: #f0f6fc;
+  --destructive: #ef4444;
+  --destructive-foreground: #ffffff;
+  --border: #30363d;
+  --input: #21262d;
+  --input-background: #161b22;
+  --switch-background: #484f58;
+  --ring: #0de6e3;
+  
+  /* World-Class Semantic Colors for Premium Dark Theme */
+  --text-primary: #f0f6fc;
+  --text-secondary: #c9d1d9;
+  --text-tertiary: #8b949e;
+  --text-brand: #00d4d2;
+  --text-on-brand: #0a1420;
+  
+  --bg-primary: #0d1117;
+  --bg-secondary: #161b22;
+  --bg-tertiary: #21262d;
+  --bg-brand: #00A7A5;
+  --bg-brand-hover: #00d4d2;
+  --bg-brand-subtle: rgba(0, 212, 210, 0.15);
+  --bg-brand-subtle-hover: rgba(0, 212, 210, 0.22);
+  
+  --border-primary: #30363d;
+  --border-secondary: #484f58;
+  --border-brand: #00d4d2;
+  --border-brand-subtle: rgba(0, 212, 210, 0.35);
+  
+  --shadow-sm: 0 2px 8px 0 rgb(0 0 0 / 0.5);
+  --shadow-md: 0 8px 24px -4px rgb(0 0 0 / 0.6);
+  --shadow-lg: 0 20px 40px -8px rgb(0 0 0 / 0.7);
+  --shadow-brand: 0 20px 40px -8px rgba(0, 212, 210, 0.4);
+  
+  /* World-Class Premium Gradients for Dark Theme */
+  --gradient-brand: linear-gradient(135deg, #00A7A5 0%, #00d4d2 50%, #0de6e3 100%);
+  
+  /* Sophisticated layered mesh gradients - world-class luxury */
+  --gradient-mesh-1: radial-gradient(circle at 20% 30%, rgba(0, 212, 210, 0.15) 0%, rgba(0, 167, 165, 0.08) 25%, transparent 50%),
+                      radial-gradient(circle at 80% 70%, rgba(0, 167, 165, 0.12) 0%, rgba(0, 212, 210, 0.06) 25%, transparent 50%);
+  
+  --gradient-mesh-2: radial-gradient(circle at 50% 0%, rgba(0, 212, 210, 0.18) 0%, rgba(0, 167, 165, 0.1) 20%, transparent 40%),
+                      radial-gradient(circle at 100% 100%, rgba(0, 167, 165, 0.14) 0%, rgba(0, 212, 210, 0.08) 20%, transparent 40%);
+  
+  --gradient-mesh-3: radial-gradient(ellipse at 0% 0%, rgba(0, 212, 210, 0.12) 0%, rgba(0, 167, 165, 0.08) 30%, transparent 60%),
+                      radial-gradient(ellipse at 100% 100%, rgba(0, 167, 165, 0.12) 0%, rgba(0, 212, 210, 0.08) 30%, transparent 60%);
+  
+  /* Rich atmospheric directional gradients */
+  --gradient-subtle-top: linear-gradient(180deg, rgba(0, 212, 210, 0.12) 0%, rgba(0, 167, 165, 0.06) 50%, transparent 100%);
+  --gradient-subtle-bottom: linear-gradient(0deg, rgba(0, 212, 210, 0.12) 0%, rgba(0, 167, 165, 0.06) 50%, transparent 100%);
+  
+  /* World-class layered atmospheric background gradients */
+  --gradient-bg-subtle: radial-gradient(circle at 25% 25%, rgba(0, 212, 210, 0.15) 0%, rgba(0, 167, 165, 0.08) 25%, transparent 50%),
+                         radial-gradient(circle at 75% 75%, rgba(0, 167, 165, 0.12) 0%, rgba(0, 212, 210, 0.06) 25%, transparent 50%),
+                         radial-gradient(circle at 50% 50%, rgba(13, 230, 227, 0.05) 0%, transparent 40%),
+                         linear-gradient(135deg, #0d1117 0%, #161b22 25%, #1c2128 50%, #161b22 75%, #0d1117 100%);
+  
+  --gradient-bg-secondary: radial-gradient(circle at 50% 0%, rgba(0, 212, 210, 0.14) 0%, rgba(0, 167, 165, 0.08) 20%, transparent 45%),
+                            radial-gradient(circle at 0% 100%, rgba(0, 167, 165, 0.1) 0%, transparent 35%),
+                            radial-gradient(circle at 100% 100%, rgba(0, 212, 210, 0.08) 0%, transparent 35%),
+                            linear-gradient(160deg, #161b22 0%, #21262d 30%, #1c2128 70%, #161b22 100%);
+  
+  --gradient-bg-card: radial-gradient(circle at 100% 0%, rgba(0, 212, 210, 0.12) 0%, rgba(0, 167, 165, 0.06) 30%, transparent 60%),
+                       radial-gradient(circle at 0% 100%, rgba(0, 167, 165, 0.08) 0%, transparent 50%),
+                       linear-gradient(135deg, #161b22 0%, #1c2128 50%, #21262d 100%);
+  
+  /* Chart colors for dark mode */
+  --chart-1: oklch(0.488 0.243 264.376);
+  --chart-2: oklch(0.696 0.17 162.48);
+  --chart-3: oklch(0.769 0.188 70.08);
+  --chart-4: oklch(0.627 0.265 303.9);
+  --chart-5: oklch(0.645 0.246 16.439);
+  
+  /* Sidebar for dark mode */
+  --sidebar: #0d1117;
+  --sidebar-foreground: #f0f6fc;
+  --sidebar-primary: #00A7A5;
+  --sidebar-primary-foreground: #f0f6fc;
+  --sidebar-accent: #21262d;
+  --sidebar-accent-foreground: #f0f6fc;
+  --sidebar-border: #30363d;
+  --sidebar-ring: #00d4d2;
+  
+  /* Logo fill color for dark mode */
+  --fill-0: #f0f6fc;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-input-background: var(--input-background);
+  --color-switch-background: var(--switch-background);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  html {
+    @apply bg-background;
+    font-size: var(--font-size);
+    background-color: var(--background);
+    min-height: 100%;
+    height: 100%;
+    overscroll-behavior: none;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-family);
+    background: var(--background);
+    background-image: var(--gradient-bg-subtle);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    min-height: 100dvh; /* Dynamic viewport height for mobile */
+    position: relative;
+    overscroll-behavior: none;
+  }
+
+  /* Ensure root div fills entire viewport */
+  #root {
+    min-height: 100vh;
+    min-height: 100dvh;
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    overscroll-behavior: none;
+  }
+
+  h1 {
+    font-size: var(--text-2xl);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+  }
+
+  h2 {
+    font-size: var(--text-xl);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+  }
+
+  h3 {
+    font-size: var(--text-lg);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+  }
+
+  h4 {
+    font-size: var(--text-base);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+  }
+
+  p {
+    font-size: var(--text-base);
+    font-weight: var(--font-weight-normal);
+    line-height: 1.5;
+  }
+
+  label {
+    font-size: var(--text-base);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+  }
+
+  button {
+    font-size: var(--text-base);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+  }
+
+  input {
+    font-size: var(--text-base);
+    font-weight: var(--font-weight-normal);
+    line-height: 1.5;
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%) skewX(-12deg);
+  }
+  100% {
+    transform: translateX(200%) skewX(-12deg);
+  }
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-33.33%);
+  }
+}
+
+.animate-scroll {
+  animation: scroll 20s linear infinite;
+}
+
+.animate-scroll:hover {
+  animation-play-state: paused;
+}
+
+/* Radial gradient utility */
+.bg-gradient-radial {
+  background-image: radial-gradient(circle, var(--tw-gradient-stops));
+}
+
+/* Premium gradient overlay utilities */
+.gradient-mesh-overlay {
+  position: relative;
+}
+
+.gradient-mesh-overlay::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--gradient-mesh-1);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.gradient-card {
+  background: var(--gradient-bg-card);
+}
+
+.gradient-section {
+  background: var(--gradient-bg-secondary);
+}
