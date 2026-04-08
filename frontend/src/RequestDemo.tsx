@@ -600,7 +600,7 @@ function DetailsForm({ selectedDate, selectedTime, formData, setFormData, onBack
           <div>
             <label className="flex items-center gap-2 text-[var(--text-secondary)] mb-2">
               <Phone className="w-4 h-4 text-[#00A7A5]" />
-              Phone Number
+              Phone Number *
             </label>
             <input
               type="tel"
