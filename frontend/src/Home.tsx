@@ -238,7 +238,7 @@ function VideoSection() {
                 controls
                 className="w-full h-full object-cover"
               >
-                <source src="https://firebasestorage.googleapis.com/v0/b/resolute-choir-479715-c9.firebasestorage.app/o/TF_Videos%2FJeeva_Thesisflow.mp4?alt=media&token=4961c71a-2557-4c98-b7e3-93ea0bc60d90" type="video/mp4" />
+                <source src="https://firebasestorage.googleapis.com/v0/b/resolute-choir-479715-c9.firebasestorage.app/o/TF_Videos%2FThesisflow.mp4?alt=media&token=857cefae-3752-4ca3-8586-2d13ff250e76" type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
               
