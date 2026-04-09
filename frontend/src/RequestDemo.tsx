@@ -267,17 +267,8 @@ function CalendarBooking({ selectedDate, setSelectedDate, selectedTime, setSelec
         hour12: true
       });
       
-      // Also store the original PST time for booking
-      const pstTime = pstDate.toLocaleTimeString('en-US', {
-        hour: '2-digit',
-        minute: '2-digit',
-        hour12: true,
-        timeZone: 'America/Los_Angeles'
-      });
-      
       return {
         localTime,
-        pstTime,
         hour: slot.hour
       };
     });
@@ -397,23 +388,23 @@ function CalendarBooking({ selectedDate, setSelectedDate, selectedTime, setSelec
         {selectedDate ? (
           <div className="space-y-3 max-h-[450px] overflow-y-auto pr-2">
             {timeSlots.map((time) => {
-              const isBooked = isSlotBooked(selectedDate, time.pstTime);
+              const isBooked = isSlotBooked(selectedDate, time.localTime);
               return (
                 <button
-                  key={time.pstTime}
-                  onClick={() => !isBooked && setSelectedTime(time.pstTime)}
+                  key={time.localTime}
+                  onClick={() => !isBooked && setSelectedTime(time.localTime)}
                   disabled={isBooked}
                   className={`w-full px-6 py-4 rounded-xl transition-all duration-200 font-medium text-base border ${
                     isBooked
                       ? 'bg-gray-50 dark:bg-gray-900 text-gray-400 dark:text-gray-600 cursor-not-allowed border-gray-200 dark:border-gray-800'
-                      : selectedTime === time.pstTime
+                      : selectedTime === time.localTime
                       ? 'bg-gradient-to-r from-[#00A7A5] to-[#00968f] text-white shadow-lg border-transparent'
                       : 'bg-white dark:bg-gray-700 text-gray-900 dark:text-white border-gray-200 dark:border-gray-600 hover:bg-gradient-to-r hover:from-[#00A7A5] hover:to-[#00968f] hover:border-transparent hover:text-white hover:shadow-md'
                   }`}
                 >
                   <div className="flex items-center justify-between">
                     <span>{time.localTime}</span>
-                    {selectedTime === time.pstTime && (
+                    {selectedTime === time.localTime && (
                       <CheckCircle2 className="w-5 h-5" />
                     )}
                     {isBooked && (

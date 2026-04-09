@@ -2091,7 +2091,7 @@ function ContactMessagesPanel() {
                       <h3 className="text-lg text-[var(--text-primary)] mb-1">
                         {message.name || (message.firstName ? `${message.firstName} ${message.lastName || ''}`.trim() : 'Anonymous')}
                       </h3>
-                      <p className="text-[var(--text-secondary)] mb-3">{message.subject}</p>
+                      <p className="text-[var(--text-secondary)] mb-3">{message.subject} - {message.organization}</p>
                       <div className="flex items-center gap-4 text-sm text-[var(--text-tertiary)] mb-4">
                         <div className="flex items-center gap-1.5">
                           <Mail className="w-4 h-4" />
