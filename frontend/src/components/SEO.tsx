@@ -61,12 +61,8 @@ export function SEO({
       if (media) element.setAttribute('media', media);
     };
 
-    // Favicon implementation
-    setLinkTag('icon', '/favicon.svg', 'image/svg+xml');
-    setLinkTag('icon', '/favicon.svg', 'image/svg+xml', undefined, '(prefers-color-scheme: light)');
-    setLinkTag('icon', '/favicon-dark.svg', 'image/svg+xml', undefined, '(prefers-color-scheme: dark)');
-    setLinkTag('apple-touch-icon', '/apple-touch-icon.png', undefined, '180x180');
-    setLinkTag('manifest', '/manifest.json');
+    // Favicon implementation - Single unified favicon
+    setLinkTag('icon', '../public/favicon.ico', 'image/x-icon');
     
     // Theme color meta tag
     setMetaTag('theme-color', '#00A7A5');

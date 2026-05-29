@@ -1,0 +1,41 @@
+# Robots.txt for Thesisflow
+# This file tells search engines which pages to crawl and which to avoid
+
+# Allow all bots
+User-agent: *
+Allow: /
+Disallow: /admin
+Disallow: /login
+Disallow: /signup
+Disallow: /.next/
+Disallow: /node_modules/
+Disallow: /*.js$
+Disallow: /*.css$
+Disallow: /*.json$
+
+# Specific rules for Google
+User-agent: Googlebot
+Allow: /
+Disallow: /admin
+Disallow: /login
+
+# Specific rules for Bing
+User-agent: Bingbot
+Allow: /
+Disallow: /admin
+Disallow: /login
+
+# Crawl delay (in seconds) - Optional
+# Crawl-delay: 1
+
+# Sitemap location
+Sitemap: https://thesisflow.com/sitemap.xml
+
+# Allow crawling of CSS and JavaScript files for rendering
+User-agent: Googlebot
+Allow: /*.css$
+Allow: /*.js$
+
+User-agent: *
+Allow: /*.css$
+Allow: /*.js$
