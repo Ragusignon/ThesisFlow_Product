@@ -41,7 +41,7 @@ function HeroSection() {
         </div>
 
         <h1 className="mb-4 leading-tight max-w-3xl mx-auto" style={{ fontSize: '2.5rem' }}>
-          Modern thesis management for academic institutions
+          Modern Thesis Management for Academic Institutions
         </h1>
 
         <p className="text-[var(--text-secondary)] leading-relaxed max-w-2xl mx-auto" style={{ fontSize: 'var(--text-lg)' }}>
@@ -137,8 +137,7 @@ function WhatThesisFlowDoesSection() {
               Enterprise Security
             </h3>
             <p className="text-[var(--text-secondary)] leading-relaxed">
-              GDPR-compliant infrastructure with enterprise-grade security standards. 
-              Academic data protection is non-negotiable.
+             Infrastructure designed with enterprise-grade security standards. Academic data protection is non-negotiable
             </p>
           </motion.div>
 
@@ -306,7 +305,7 @@ function ApproachSection() {
     {
       icon: Shield,
       title: 'Security & Compliance',
-      description: 'GDPR-compliant infrastructure with enterprise-grade security standards. Academic data protection is paramount.',
+      description: 'Infrastructure designed with enterprise-grade security standards. Academic data protection is paramount',
     },
     {
       icon: Users,
@@ -418,7 +417,7 @@ function CTASection({ onNavigate }: any) {
               <div className="flex flex-wrap items-center justify-center gap-4 pt-6 border-t border-[var(--border-primary)]">
                 <div className="flex items-center gap-2 text-sm text-[var(--text-tertiary)]">
                   <CheckCircle2 className="w-3.5 h-3.5 text-[var(--text-brand)]" />
-                  <span>GDPR Compliant</span>
+                  <span>Compliance-Ready Architecture</span>
                 </div>
                 <div className="flex items-center gap-2 text-sm text-[var(--text-tertiary)]">
                   <Shield className="w-3.5 h-3.5 text-[var(--text-brand)]" />

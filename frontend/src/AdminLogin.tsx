@@ -85,10 +85,10 @@ export default function AdminLogin({ onNavigate }: any) {
               <Shield className="w-8 h-8 text-[var(--text-brand)]" />
             </div>
             <h1 className="text-2xl text-[var(--text-primary)] mb-2">
-              Admin Portal
+              Administration Portal
             </h1>
             <p className="text-[var(--text-secondary)]">
-              Manage blog posts and institutional requests
+              Access content management and institutional requests
             </p>
           </div>
 
@@ -118,7 +118,7 @@ export default function AdminLogin({ onNavigate }: any) {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   required
-                  placeholder="Enter your username"
+                  placeholder="Enter your admin username"
                   className="w-full px-4 py-3 bg-[var(--bg-secondary)] border border-[var(--border-primary)] rounded-lg text-[var(--text-primary)] placeholder:text-[var(--text-tertiary)] focus:border-[var(--border-brand)] focus:ring-2 focus:ring-[var(--bg-brand-subtle)] focus:outline-none transition-all"
                 />
               </div>

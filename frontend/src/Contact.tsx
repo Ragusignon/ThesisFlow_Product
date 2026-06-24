@@ -403,7 +403,7 @@ const handleSubmit = async (e: React.FormEvent) => {
               <span className="text-sm text-[var(--text-brand)]">Quick Answers</span>
             </div>
             <h2 className="text-[var(--text-primary)] mb-4" style={{ fontSize: 'var(--text-2xl)' }}>
-              Frequently Asked Questions
+              Questions
             </h2>
             <p className="text-[var(--text-secondary)]" style={{ fontSize: 'var(--text-lg)' }}>
               Common questions about getting in touch with us

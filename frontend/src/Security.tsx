@@ -6,10 +6,10 @@ import { Shield, Lock, Key, Database, Eye, FileCheck, Server, Award } from 'luci
 export default function Security({ onNavigate }: any) {
   const features = [
     { icon: Lock, title: 'End-to-End Encryption', description: 'All data encrypted in transit and at rest using AES-256.' },
-    { icon: Key, title: 'Two-Factor Authentication', description: 'Additional layer of security for your account.' },
+    { icon: Key, title: 'Institution-Verified Access', description: 'Access restricted to verified institutional accounts.' },
     { icon: Database, title: 'Secure Backups', description: 'Automated encrypted backups every 6 hours.' },
     { icon: Eye, title: 'Audit Logs', description: 'Complete activity tracking and monitoring.' },
-    { icon: FileCheck, title: 'Data Compliance', description: 'GDPR, FERPA, and SOC 2 Type II compliant.' },
+    { icon: FileCheck, title: 'Data Compliance', description: 'FERPA and GDPR aligned security practices.' },
     { icon: Server, title: 'Redundant Infrastructure', description: 'Multi-region deployment for maximum uptime.' },
   ];
 

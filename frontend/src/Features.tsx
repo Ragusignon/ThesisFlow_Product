@@ -81,7 +81,7 @@ function FeaturesGrid() {
     {
       icon: Shield,
       title: 'Enterprise Security & Compliance',
-      description: 'Bank-level encryption, secure backups, SSO/SAML integration, and full compliance with GDPR and academic standards.',
+      description: 'Bank-level encryption, secure backups, SSO/SAML integration, and security controls designed to meet institutional and regulatory expectations.',
     },
     {
       icon: Search,
@@ -261,7 +261,7 @@ function DetailedFeatures() {
                 <CheckCircle2 className="w-5 h-5 text-[#00A7A5] flex-shrink-0 mt-1" />
                 <div>
                   <div className="text-[var(--text-primary)] mb-1">GDPR & compliance</div>
-                  <div className="text-sm text-[var(--text-secondary)]">Full compliance with GDPR, FERPA, and academic data protection standards</div>
+                  <div className="text-sm text-[var(--text-secondary)]">Data storage security and governance aligned with FERPA and GDPR standards</div>
                 </div>
               </li>
               <li className="flex items-start gap-3">
@@ -352,7 +352,7 @@ function ComparisonTable() {
           className="text-center max-w-3xl mx-auto mb-16"
         >
           <h2 className="text-[var(--text-primary)] mb-6">
-            How ThesisFlow Compares to ScholarOne
+            How ThesisFlow Compares to Competitors
           </h2>
           <p className="text-[var(--text-secondary)] leading-relaxed">
             Modern thesis management built for institutions replacing 30-year-old workflows with automated, streamlined processes.
@@ -372,7 +372,7 @@ function ComparisonTable() {
                 <tr className="border-b border-[var(--border-primary)]">
                   <th className="text-left py-4 px-6 text-[var(--text-primary)] min-w-[200px]">Feature</th>
                   <th className="text-left py-4 px-6 text-[var(--text-primary)] bg-[#00A7A5]/5 min-w-[280px]">ThesisFlow</th>
-                  <th className="text-left py-4 px-6 text-[var(--text-primary)] min-w-[280px]">ScholarOne</th>
+                  <th className="text-left py-4 px-6 text-[var(--text-primary)] min-w-[280px]">Competitor</th>
                 </tr>
               </thead>
               <tbody>
@@ -439,8 +439,8 @@ function WorkflowFeatures() {
   const workflows = [
     {
       icon: FileCheck,
-      title: 'Automated Validation',
-      description: 'Automatic checks for formatting, completeness, and compliance with your institution\'s requirements before submission.',
+      title: 'Comprehensive Audit Logs',
+      description: 'capture every submission, review, approval, and change with a permanent, auditable, and fully traceable history.',
     },
     {
       icon: Calendar,
@@ -515,7 +515,7 @@ function TechnicalFeatures() {
     {
       title: 'Export Options',
       description: 'Export your thesis in multiple formats with proper formatting and citation styles preserved.',
-      features: ['PDF with embedded fonts', 'Word (.docx) format', 'LaTeX source files', 'Citation export (BibTeX, RIS)'],
+      features: ['Previous document versions ', 'PDF document with comments ', 'Word (.docx) format', 'Citation export'],
     },
   ];
 
@@ -651,7 +651,7 @@ function CTASection({ onNavigate }: any) {
               <div className="flex flex-wrap items-center justify-center gap-4 pt-6 border-t border-[var(--border-primary)]">
                 <div className="flex items-center gap-2 text-sm text-[var(--text-tertiary)]">
                   <CheckCircle2 className="w-4 h-4 text-[var(--text-brand)]" />
-                  <span>GDPR Compliant</span>
+                  <span>Compliance-Ready Architecture</span>
                 </div>
                 <div className="flex items-center gap-2 text-sm text-[var(--text-tertiary)]">
                   <Shield className="w-4 h-4 text-[var(--text-brand)]" />

@@ -26,7 +26,7 @@ const defaultDocPages: DocumentationPage[] = [
     content: `<h2>Welcome to ThesisFlow</h2>
 <p>ThesisFlow is a modern thesis management system designed for universities and research institutions. This guide will help you get started.</p>
 
-<h3>What is ThesisFlow?</h3>
+<h3>What does ThesisFlow do?</h3>
 <p>ThesisFlow replaces 30-year-old thesis review workflows with modern, automated processes. It helps institutions manage thesis submissions, reviews, and approvals efficiently.</p>
 
 <h3>Key Features</h3>
@@ -80,7 +80,7 @@ const defaultDocPages: DocumentationPage[] = [
 </ol>
 
 <h3>After Submission</h3>
-<p>Once submitted, your thesis will be routed to reviewers. You'll receive email notifications at each stage of the review process.</p>`,
+<p> Once submitted, you can track your thesis through the approval process and view reviewer feedback and comments. You’ll receive email notifications at each stage of the review process.</p>`,
     lastUpdated: '2025-11-15',
     author: 'ThesisFlow Team',
     published: true,
@@ -119,11 +119,11 @@ const defaultDocPages: DocumentationPage[] = [
   },
   {
     id: 4,
-    title: 'Frequently Asked Questions',
+    title: 'Questions',
     slug: 'faq',
     category: 'FAQ',
     excerpt: 'Answers to common questions about ThesisFlow.',
-    content: `<h2>Frequently Asked Questions</h2>
+    content: `<h2>Questions</h2>
 
 <h3>General Questions</h3>
 
@@ -139,10 +139,10 @@ const defaultDocPages: DocumentationPage[] = [
 <h3>Technical Questions</h3>
 
 <h4>Q: What file formats are supported?</h4>
-<p>A: ThesisFlow supports PDF, DOCX, and LaTeX files. PDFs are recommended for final submissions.</p>
+<p>A: This platform supports PDF files exclusively. PDFs ensure consistent formatting across all reviewers and are the recommended format for thesis submission and review workflows</p>
 
 <h4>Q: Can I integrate ThesisFlow with our existing systems?</h4>
-<p>A: Yes, ThesisFlow offers API integration capabilities. Contact our technical team for details.</p>
+<p>A: No, API integrations are not available.</p>
 
 <h4>Q: What happens if I need help?</h4>
 <p>A: We provide email support, documentation, and video tutorials. Premium support packages are available for institutions.</p>`,

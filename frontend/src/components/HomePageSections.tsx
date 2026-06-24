@@ -228,7 +228,7 @@ export function CTASection({ onNavigate }: any) {
             transition={{ delay: 0.7 }}
             className="text-center text-sm text-white/90 mt-8"
           >
-            🔒 Enterprise-grade security • 🌍 GDPR compliant • 🤝 Dedicated support team
+            🔒 Enterprise-grade security • 🌍 Compliance-Ready Architecture • 🤝 Dedicated support team
           </motion.p>
         </div>
       </div>

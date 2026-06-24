@@ -6,7 +6,7 @@ import { SEO, StructuredData, organizationSchema, softwareApplicationSchema, cre
 export default function Home({ onNavigate }: any) {
   const faqSchema = createFAQSchema([
     {
-      question: "What is ThesisFlow?",
+      question: "What does ThesisFlow do?",
       answer: "ThesisFlow is an AI-powered thesis management SaaS platform designed for universities and research institutions to automate and streamline thesis submission, review, and approval workflows. It features advanced AI modules for intelligent search and retrieval of academic documents."
     },
     {
@@ -118,7 +118,7 @@ function HeroSection({ onNavigate }: any) {
             </div>
             <div className="flex items-center gap-2">
               <BarChart3 className="w-4 h-4 text-[var(--text-brand)]" />
-              <span className="font-medium">99.9% Uptime SLA</span>
+              <span className="font-medium">99.9% Uptime Target</span>
             </div>
           </div>
         </motion.div>
@@ -336,9 +336,9 @@ function ProblemSolutionSection() {
               <div className="w-10 h-10 bg-[var(--bg-brand-subtle)] rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                 <Shield className="w-5 h-5 text-[var(--text-brand)]" />
               </div>
-              <h3 className="text-lg text-[var(--text-primary)] mb-2">Built-in Compliance</h3>
+              <h3 className="text-lg text-[var(--text-primary)] mb-2">Reliable Change Tracking</h3>
               <p className="text-base text-[var(--text-secondary)]">
-                Automatic format validation and audit trails for accreditation requirements
+                Robust change tracking with maintained change logs and a clearly structured audit trail
               </p>
             </div>
           </motion.div>
@@ -363,7 +363,7 @@ function FeaturesShowcaseSection() {
     {
       icon: Shield,
       title: 'Enterprise security',
-      description: 'GDPR-compliant with encryption and access controls',
+      description: 'Advanced data encryption and granular permission control',
     },
     {
       icon: BarChart3,
@@ -455,7 +455,7 @@ function WorkflowVisualization() {
           className="text-center mb-12"
         >
           <h2 className="text-2xl text-[var(--text-primary)] mb-3">
-            Highlevel Workflow in Academic Review
+            High-Level Workflow for Academic Review
           </h2>
           <p className="text-lg text-[var(--text-secondary)]">
             Four automated steps from submission to archive
