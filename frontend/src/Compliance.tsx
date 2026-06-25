@@ -43,18 +43,18 @@ export default function Compliance({ onNavigate }: any) {
   ];
 
   const securityMeasures = [
-    'End-to-end encryption (TLS 1.3 and AES-256)',
     'Secure authentication and session management',
+    'Activity logging for system operations',
     'Role-based access control (RBAC)',
     'Regular security code reviews',
-    'Automated vulnerability scanning',
+    'Vulnerability monitoring and patching processes',
     'Data backup and recovery planning',
     'Secure development lifecycle',
     'Privacy by design principles',
   ];
 
   const dataProtection = [
-    'Data encryption at rest and in transit',
+    'Policy-controlled data access',
     'Minimal data collection principles',
     'Clear data retention policies',
     'User data export capabilities',
@@ -98,7 +98,7 @@ export default function Compliance({ onNavigate }: any) {
               <div>
                 <h3 className="text-xl mb-3">Our Compliance Journey</h3>
                 <p className="text-[var(--text-secondary)] leading-relaxed mb-4">
-                  We're a new startup replacing 30-year-old review workflows with modern automation. While we don't yet have formal compliance certifications, we're actively working toward them as we build our platform. We're designing with compliance requirements in mind from the ground up.
+                  We're a new startup replacing 30-year-old review workflows with modern automation.While we do not currently hold formal compliance certifications, we are designing our systems to align with common industry and institutional security expectations and preparing for future compliance requirements as we scale .
                 </p>
                 <p className="text-[var(--text-secondary)] leading-relaxed">
                   <strong>Current Status:</strong> Pre-launch development phase with no institutional clients yet. We're building our compliance framework alongside our product.
@@ -277,7 +277,7 @@ export default function Compliance({ onNavigate }: any) {
                 <ul className="space-y-2 text-sm text-[var(--text-secondary)]">
                   <li className="flex items-start gap-2">
                     <span className="w-1.5 h-1.5 bg-[var(--text-brand)] rounded-full mt-2"></span>
-                    <span>Automated submission and validation</span>
+                    <span>Automated submission handling</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="w-1.5 h-1.5 bg-[var(--text-brand)] rounded-full mt-2"></span>

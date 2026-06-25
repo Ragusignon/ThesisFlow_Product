@@ -22,7 +22,7 @@ export default function PrivacyPolicy({ onNavigate }: any) {
               <section>
                 <h2 style={{ fontSize: 'var(--text-xl)' }} className="text-[var(--text-primary)] mb-4">Introduction</h2>
                 <p style={{ fontSize: 'var(--text-base)' }} className="text-[var(--text-secondary)] leading-relaxed">
-                  Thesisflow® (a product of MIGRI Technologies, "we", "our", or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our institutional thesis management platform. This policy applies to universities, academic publishers, and other institutions that adopt Thesisflow, as well as their end users.
+                  Thesisflow® (a product of MIGRI Technologies, "we", "our", or "us") values your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our institutional thesis management platform. This policy applies to universities, academic publishers, and other institutions that adopt Thesisflow, as well as their end users.
                 </p>
               </section>
 
