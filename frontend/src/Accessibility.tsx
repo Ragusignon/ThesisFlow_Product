@@ -1,60 +1,31 @@
 import { motion } from 'motion/react';
 import PageLayout from './components/PageLayout';
-import { Accessibility as AccessibilityIcon, CheckCircle2, Calendar } from 'lucide-react';
+import { Accessibility as AccessibilityIcon, Calendar } from 'lucide-react';
 
 export default function Accessibility({ onNavigate }: any) {
-  const wcagFeatures = [
-    {
-      principle: 'Perceivable',
-      items: [
-        'Alternative text for all images and non-text content',
-        'Captions and transcripts for multimedia content',
-        'Content structure using proper HTML semantics',
-        'Sufficient color contrast (minimum 4.5:1 for normal text)',
-        'Text resizable up to 200% without loss of functionality',
-        'Content adaptable to different presentations and devices',
-      ]
-    },
-    {
-      principle: 'Operable',
-      items: [
-        'Full keyboard navigation support',
-        'No keyboard traps',
-        'Skip navigation links to bypass repetitive content',
-        'Descriptive page titles and headings',
-        'Visible focus indicators',
-        'Sufficient time for users to read and interact with content',
-        'No content that causes seizures or physical reactions',
-      ]
-    },
-    {
-      principle: 'Understandable',
-      items: [
-        'Clear and simple language',
-        'Consistent navigation and identification',
-        'Helpful error messages and suggestions',
-        'Labels and instructions for user input',
-        'Predictable functionality and behavior',
-        'Context-sensitive help where needed',
-      ]
-    },
-    {
-      principle: 'Robust',
-      items: [
-        'Valid HTML and ARIA markup',
-        'Compatible with current and future assistive technologies',
-        'Progressive enhancement approach',
-        'Graceful degradation for older browsers',
-      ]
-    },
+  const designConsiderations = [
+    'Structured content using proper HTML semantics',
+    'Responsive design adaptable to different devices and screen sizes',
+    'Readable and simple interface design with clear language',
+    'Consistent navigation and identification patterns',
+    'Descriptive page titles and headings',
+    'Form labels and input guidance for user interactions',
+    'Helpful error messages and suggestions where applicable',
+    'Predictable interface behaviour and interaction patterns',
+    'Content designed to be readable without requiring time constraints',
+    'General support for content resizing and layout adaptability',
   ];
 
-  const assistiveTech = [
-    { name: 'Screen Readers', examples: 'JAWS, NVDA, VoiceOver, TalkBack' },
-    { name: 'Screen Magnifiers', examples: 'ZoomText, Windows Magnifier, macOS Zoom' },
-    { name: 'Speech Recognition', examples: 'Dragon NaturallySpeaking, Windows Speech Recognition' },
-    { name: 'Switch Access', examples: 'Various hardware switches and alternative input devices' },
-    { name: 'Keyboard-Only Navigation', examples: 'Full functionality without mouse' },
+  const testingTools = [
+    'Automated accessibility testing tools',
+    'Manual testing with assistive technologies',
+    'User testing with real academic users',
+  ];
+
+  const institutionalSupport = [
+    'Accessibility training for administrators and users',
+    'Documentation on creating accessible content',
+    'Assistance with institutional accessibility compliance',
   ];
 
   return (
@@ -76,7 +47,7 @@ export default function Accessibility({ onNavigate }: any) {
               <section>
                 <h2 style={{ fontSize: 'var(--text-xl)' }} className="text-[var(--text-primary)] mb-4">Our Commitment</h2>
                 <p style={{ fontSize: 'var(--text-base)' }} className="text-[var(--text-secondary)] leading-relaxed mb-4">
-                  Thesisflow® (a product of MIGRI Technologies) is committed to ensuring digital accessibility for people with disabilities. We are continually improving the user experience for everyone and applying the relevant accessibility standards to ensure our platform is accessible to all users, regardless of ability.
+                  Thesisflow® (a product of MIGRI Technologies) is committed to improving the accessibility and usability of our platform for all users, including people with disabilities. We are continuously enhancing the user experience to support inclusive access for a broad range of users.
                 </p>
                 <p style={{ fontSize: 'var(--text-base)' }} className="text-[var(--text-secondary)] leading-relaxed">
                   We believe that education and research should be accessible to everyone. Our platform is designed to support students, advisors, reviewers, and administrators with diverse abilities and needs.
@@ -85,97 +56,23 @@ export default function Accessibility({ onNavigate }: any) {
 
               <section>
                 <h2 style={{ fontSize: 'var(--text-xl)' }} className="text-[var(--text-primary)] mb-4">Standards and Guidelines</h2>
-                <p style={{ fontSize: 'var(--text-base)' }} className="text-[var(--text-secondary)] leading-relaxed mb-4">
-                  Thesisflow strives to conform to Level AA of the Web Content Accessibility Guidelines (WCAG) 2.1. These guidelines are organized around four principles that lay the foundation for accessible web content:
+                <p style={{ fontSize: 'var(--text-base)' }} className="text-[var(--text-secondary)] leading-relaxed">
+                  Thesisflow uses the Web Content Accessibility Guidelines (WCAG) 2.1 Level AA as a reference framework to guide accessibility improvements across the platform.
                 </p>
-
-                {wcagFeatures.map((section, index) => (
-                  <div key={section.principle} className="mb-6">
-                    <h3 style={{ fontSize: 'var(--text-lg)' }} className="text-[var(--text-primary)] mb-3">{index + 1}. {section.principle}</h3>
-                    <ul className="space-y-2">
-                      {section.items.map((item) => (
-                        <li key={item} className="flex items-start gap-3">
-                          <CheckCircle2 className="w-5 h-5 text-[var(--text-brand)] flex-shrink-0 mt-0.5" />
-                          <span style={{ fontSize: 'var(--text-base)' }} className="text-[var(--text-secondary)]">{item}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                ))}
               </section>
 
               <section>
-                <h2 style={{ fontSize: 'var(--text-xl)' }} className="text-[var(--text-primary)] mb-4">Assistive Technology Compatibility</h2>
+                <h2 style={{ fontSize: 'var(--text-xl)' }} className="text-[var(--text-primary)] mb-4">Design and Usability Considerations</h2>
                 <p style={{ fontSize: 'var(--text-base)' }} className="text-[var(--text-secondary)] leading-relaxed mb-4">
-                  We design and test Thesisflow to be compatible with the following assistive technologies:
-                </p>
-                <div className="space-y-3">
-                  {assistiveTech.map((tech) => (
-                    <div key={tech.name} className="bg-[var(--card)] border border-[var(--border-primary)] rounded-xl p-4">
-                      <h4 style={{ fontSize: 'var(--text-base)' }} className="text-[var(--text-primary)] mb-1">{tech.name}</h4>
-                      <p style={{ fontSize: 'var(--text-sm)' }} className="text-[var(--text-secondary)]">{tech.examples}</p>
-                    </div>
-                  ))}
-                </div>
-              </section>
-
-              <section>
-                <h2 style={{ fontSize: 'var(--text-xl)' }} className="text-[var(--text-primary)] mb-4">Keyboard Navigation</h2>
-                <p style={{ fontSize: 'var(--text-base)' }} className="text-[var(--text-secondary)] leading-relaxed mb-4">
-                  All functionality is available using a keyboard alone. Key keyboard shortcuts include:
-                </p>
-                <div className="bg-[var(--card)] border border-[var(--border-primary)] rounded-xl p-6">
-                  <ul style={{ fontSize: 'var(--text-base)' }} className="space-y-2 text-[var(--text-secondary)]">
-                    <li className="flex items-start gap-3">
-                      <span className="text-[var(--text-brand)] font-mono" style={{ fontSize: 'var(--text-sm)' }}>Tab</span>
-                      <span>Navigate forward through interactive elements</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <span className="text-[var(--text-brand)] font-mono" style={{ fontSize: 'var(--text-sm)' }}>Shift + Tab</span>
-                      <span>Navigate backward through interactive elements</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <span className="text-[var(--text-brand)] font-mono" style={{ fontSize: 'var(--text-sm)' }}>Enter</span>
-                      <span>Activate links and buttons</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <span className="text-[var(--text-brand)] font-mono" style={{ fontSize: 'var(--text-sm)' }}>Space</span>
-                      <span>Activate buttons and toggle checkboxes</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <span className="text-[var(--text-brand)] font-mono" style={{ fontSize: 'var(--text-sm)' }}>Arrow Keys</span>
-                      <span>Navigate within menus, dropdowns, and radio groups</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <span className="text-[var(--text-brand)] font-mono" style={{ fontSize: 'var(--text-sm)' }}>Esc</span>
-                      <span>Close dialogs and modal windows</span>
-                    </li>
-                  </ul>
-                </div>
-              </section>
-
-              <section>
-                <h2 style={{ fontSize: 'var(--text-xl)' }} className="text-[var(--text-primary)] mb-4">Document Accessibility</h2>
-                <p style={{ fontSize: 'var(--text-base)' }} className="text-[var(--text-secondary)] leading-relaxed mb-4">
-                  We encourage users to create accessible thesis documents. Our platform supports:
+                  Thesisflow incorporates the following design and usability characteristics:
                 </p>
                 <ul style={{ fontSize: 'var(--text-base)' }} className="space-y-2 text-[var(--text-secondary)]">
-                  <li className="flex items-start gap-2">
-                    <span className="w-1.5 h-1.5 bg-[var(--text-brand)] rounded-full mt-2"></span>
-                    <span>PDF/UA (Universal Accessibility) compliant documents</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="w-1.5 h-1.5 bg-[var(--text-brand)] rounded-full mt-2"></span>
-                    <span>Document accessibility checking and validation</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="w-1.5 h-1.5 bg-[var(--text-brand)] rounded-full mt-2"></span>
-                    <span>Guidelines for creating accessible academic content</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="w-1.5 h-1.5 bg-[var(--text-brand)] rounded-full mt-2"></span>
-                    <span>Alternative format generation capabilities</span>
-                  </li>
+                  {designConsiderations.map((item) => (
+                    <li key={item} className="flex items-start gap-2">
+                      <span className="w-1.5 h-1.5 bg-[var(--text-brand)] rounded-full mt-2 flex-shrink-0"></span>
+                      <span>{item}</span>
+                    </li>
+                  ))}
                 </ul>
               </section>
 
@@ -185,22 +82,12 @@ export default function Accessibility({ onNavigate }: any) {
                   We conduct regular accessibility testing using:
                 </p>
                 <ul style={{ fontSize: 'var(--text-base)' }} className="space-y-2 text-[var(--text-secondary)]">
-                  <li className="flex items-start gap-2">
-                    <span className="w-1.5 h-1.5 bg-[var(--text-brand)] rounded-full mt-2"></span>
-                    <span>Automated accessibility testing tools (axe, WAVE, Lighthouse)</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="w-1.5 h-1.5 bg-[var(--text-brand)] rounded-full mt-2"></span>
-                    <span>Manual testing with assistive technologies</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="w-1.5 h-1.5 bg-[var(--text-brand)] rounded-full mt-2"></span>
-                    <span>User testing with people with disabilities</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="w-1.5 h-1.5 bg-[var(--text-brand)] rounded-full mt-2"></span>
-                    <span>Third-party accessibility audits</span>
-                  </li>
+                  {testingTools.map((item) => (
+                    <li key={item} className="flex items-start gap-2">
+                      <span className="w-1.5 h-1.5 bg-[var(--text-brand)] rounded-full mt-2 flex-shrink-0"></span>
+                      <span>{item}</span>
+                    </li>
+                  ))}
                 </ul>
               </section>
 
@@ -211,15 +98,15 @@ export default function Accessibility({ onNavigate }: any) {
                 </p>
                 <ul style={{ fontSize: 'var(--text-base)' }} className="space-y-2 text-[var(--text-secondary)]">
                   <li className="flex items-start gap-2">
-                    <span className="w-1.5 h-1.5 bg-[var(--text-brand)] rounded-full mt-2"></span>
+                    <span className="w-1.5 h-1.5 bg-[var(--text-brand)] rounded-full mt-2 flex-shrink-0"></span>
                     <span>Some third-party embedded content may not meet WCAG 2.1 Level AA standards</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="w-1.5 h-1.5 bg-[var(--text-brand)] rounded-full mt-2"></span>
+                    <span className="w-1.5 h-1.5 bg-[var(--text-brand)] rounded-full mt-2 flex-shrink-0"></span>
                     <span>User-uploaded documents are dependent on the accessibility of the source material</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="w-1.5 h-1.5 bg-[var(--text-brand)] rounded-full mt-2"></span>
+                    <span className="w-1.5 h-1.5 bg-[var(--text-brand)] rounded-full mt-2 flex-shrink-0"></span>
                     <span>Complex mathematical notation may require specialized assistive technology</span>
                   </li>
                 </ul>
@@ -234,22 +121,12 @@ export default function Accessibility({ onNavigate }: any) {
                   For institutions using Thesisflow, we offer:
                 </p>
                 <ul style={{ fontSize: 'var(--text-base)' }} className="space-y-2 text-[var(--text-secondary)]">
-                  <li className="flex items-start gap-2">
-                    <span className="w-1.5 h-1.5 bg-[var(--text-brand)] rounded-full mt-2"></span>
-                    <span>Accessibility training for administrators and users</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="w-1.5 h-1.5 bg-[var(--text-brand)] rounded-full mt-2"></span>
-                    <span>Documentation on creating accessible content</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="w-1.5 h-1.5 bg-[var(--text-brand)] rounded-full mt-2"></span>
-                    <span>Assistance with institutional accessibility compliance</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="w-1.5 h-1.5 bg-[var(--text-brand)] rounded-full mt-2"></span>
-                    <span>VPAT (Voluntary Product Accessibility Template) documentation</span>
-                  </li>
+                  {institutionalSupport.map((item) => (
+                    <li key={item} className="flex items-start gap-2">
+                      <span className="w-1.5 h-1.5 bg-[var(--text-brand)] rounded-full mt-2 flex-shrink-0"></span>
+                      <span>{item}</span>
+                    </li>
+                  ))}
                 </ul>
               </section>
 
@@ -277,7 +154,7 @@ export default function Accessibility({ onNavigate }: any) {
               <section>
                 <h2 style={{ fontSize: 'var(--text-xl)' }} className="text-[var(--text-primary)] mb-4">Third-Party Content</h2>
                 <p style={{ fontSize: 'var(--text-base)' }} className="text-[var(--text-secondary)] leading-relaxed">
-                  While we strive to ensure that third-party content and integrations meet accessibility standards, we do not have full control over external content. If you encounter inaccessible third-party content, please contact us, and we will work with our partners to address the issue.
+                  Some features of Thesisflow may rely on third-party services or content. While we aim to provide a consistent user experience, we do not control the accessibility of third-party content. If you encounter any difficulty with such content, you may contact us, and we will review the issue where possible.
                 </p>
               </section>
 

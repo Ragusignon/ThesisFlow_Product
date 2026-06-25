@@ -12,7 +12,7 @@ export default function GDPR({ onNavigate }: any) {
               <Shield className="w-4 h-4 text-[var(--text-brand)]" />
               <span style={{ fontSize: 'var(--text-sm)' }} className="text-[var(--text-brand)]">Legal</span>
             </div>
-            <h1 style={{ fontSize: 'var(--text-4xl)' }} className="lg:text-5xl text-[var(--text-primary)] mb-4">GDPR Compliance</h1>
+            <h1 style={{ fontSize: 'var(--text-4xl)' }} className="lg:text-5xl text-[var(--text-primary)] mb-4">GDPR & DPDPA Readiness</h1>
             <div className="flex items-center gap-2 text-[var(--text-primary)] mb-12 bg-[var(--bg-brand-subtle)] border border-[var(--border-brand-subtle)] rounded-lg px-4 py-3 w-fit">
               <Calendar className="w-5 h-5 text-[var(--text-brand)]" />
               <span style={{ fontSize: 'var(--text-base)' }} className="font-medium">Last updated: January 10, 2026</span>
@@ -20,12 +20,15 @@ export default function GDPR({ onNavigate }: any) {
 
             <div className="prose prose-lg max-w-none space-y-8">
               <section>
-                <h2 style={{ fontSize: 'var(--text-xl)' }} className="text-[var(--text-primary)] mb-4">Our Commitment to GDPR</h2>
+                <h2 style={{ fontSize: 'var(--text-xl)' }} className="text-[var(--text-primary)] mb-4">Our Commitment to GDPR and DPDPA</h2>
                 <p style={{ fontSize: 'var(--text-base)' }} className="text-[var(--text-secondary)] leading-relaxed mb-4">
-                  Thesisflow® (a product of MIGRI Technologies) is committed to protecting the privacy rights of individuals in the European Union and European Economic Area. We fully comply with the General Data Protection Regulation (GDPR) (EU) 2016/679 and implement appropriate technical and organizational measures to ensure data protection.
+                  Thesisflow® (a product of MIGRI Technologies) is designed with a strong focus on privacy, security, and responsible data handling. We are actively working toward alignment with the principles of the General Data Protection Regulation (GDPR) (EU) 2016/679 and India's Digital Personal Data Protection Act, 2023 (DPDPA). Our systems are being developed with privacy-by-design and security-by-default principles in mind.
+                </p>
+                <p style={{ fontSize: 'var(--text-base)' }} className="text-[var(--text-secondary)] leading-relaxed mb-4">
+                  While we are not claiming full compliance at this stage, we are continuously improving our platform, policies, and internal processes to better meet applicable privacy and data protection expectations.
                 </p>
                 <p style={{ fontSize: 'var(--text-base)' }} className="text-[var(--text-secondary)] leading-relaxed">
-                  This document explains how we comply with GDPR requirements and what rights you have regarding your personal data.
+                  This document describes our current approach, design principles, and the privacy rights we aim to support as the product evolves.
                 </p>
               </section>
 
@@ -34,7 +37,7 @@ export default function GDPR({ onNavigate }: any) {
                 <p style={{ fontSize: 'var(--text-base)' }} className="text-[var(--text-secondary)] leading-relaxed mb-4">
                   We process personal data under the following legal bases:
                 </p>
-                <ul className="space-y-3">
+                <ul className="space-y-3 mb-4">
                   <li className="flex items-start gap-3">
                     <CheckCircle2 className="w-5 h-5 text-[var(--text-brand)] flex-shrink-0 mt-0.5" />
                     <div style={{ fontSize: 'var(--text-base)' }}>
@@ -64,46 +67,53 @@ export default function GDPR({ onNavigate }: any) {
                     </div>
                   </li>
                 </ul>
+                <p style={{ fontSize: 'var(--text-base)' }} className="text-[var(--text-secondary)] leading-relaxed">
+                  These bases may be refined as our compliance and legal review processes mature.
+                </p>
               </section>
 
               <section>
-                <h2 style={{ fontSize: 'var(--text-xl)' }} className="text-[var(--text-primary)] mb-4">Your Rights Under GDPR</h2>
+                <h2 style={{ fontSize: 'var(--text-xl)' }} className="text-[var(--text-primary)] mb-4">Rights We Aim to Support (DPDPA & GDPR)</h2>
                 <p style={{ fontSize: 'var(--text-base)' }} className="text-[var(--text-secondary)] leading-relaxed mb-4">
-                  As a data subject under GDPR, you have the following rights:
+                  We aim to support the following rights, subject to legal requirements, technical feasibility, and the role of the institution managing the data:
                 </p>
-                <ul className="space-y-4">
+                <ul className="space-y-4 mb-4">
                   {[
                     {
                       title: 'Right of Access',
-                      description: 'Request confirmation of whether we process your personal data and obtain a copy of it'
+                      description: 'Request information about personal data processed'
                     },
                     {
-                      title: 'Right to Rectification',
-                      description: 'Request correction of inaccurate or incomplete personal data'
+                      title: 'Right to Correction',
+                      description: 'Request correction of inaccurate or incomplete data'
                     },
                     {
-                      title: 'Right to Erasure ("Right to be Forgotten")',
-                      description: 'Request deletion of your personal data under certain circumstances'
+                      title: 'Right to Deletion',
+                      description: 'Request deletion of personal data where applicable'
                     },
                     {
-                      title: 'Right to Restriction of Processing',
-                      description: 'Request that we limit the processing of your personal data in certain situations'
+                      title: 'Right to Restrict Processing',
+                      description: 'Request limitation of processing in certain cases'
                     },
                     {
-                      title: 'Right to Data Portability',
-                      description: 'Receive your personal data in a structured, commonly used, machine-readable format'
+                      title: 'Right to Data Portability (GDPR)',
+                      description: 'Receive personal data in a structured format where feasible'
                     },
                     {
-                      title: 'Right to Object',
-                      description: 'Object to processing based on legitimate interests or for direct marketing purposes'
-                    },
-                    {
-                      title: 'Rights Related to Automated Decision-Making',
-                      description: 'Not be subject to decisions based solely on automated processing that produce legal effects'
+                      title: 'Right to Object (GDPR)',
+                      description: 'Object to certain types of processing'
                     },
                     {
                       title: 'Right to Withdraw Consent',
-                      description: 'Withdraw consent at any time where processing is based on consent'
+                      description: 'Withdraw consent where processing is based on consent'
+                    },
+                    {
+                      title: 'Right to Grievance Redressal (DPDPA)',
+                      description: 'Raise concerns through appropriate channels'
+                    },
+                    {
+                      title: 'Transparency for Automated Processing',
+                      description: 'Request information about significant automated decisions where applicable'
                     },
                   ].map((right) => (
                     <li key={right.title} className="flex items-start gap-3">
@@ -115,6 +125,9 @@ export default function GDPR({ onNavigate }: any) {
                     </li>
                   ))}
                 </ul>
+                <p style={{ fontSize: 'var(--text-base)' }} className="text-[var(--text-secondary)] leading-relaxed">
+                  The availability of these rights may vary depending on the legal context and system maturity.
+                </p>
               </section>
 
               <section>
@@ -138,72 +151,50 @@ export default function GDPR({ onNavigate }: any) {
 
                 <h3 style={{ fontSize: 'var(--text-lg)' }} className="text-[var(--text-primary)] mb-3 mt-6">Technical Measures</h3>
                 <ul style={{ fontSize: 'var(--text-base)' }} className="space-y-2 text-[var(--text-secondary)] mb-6">
-                  <li className="flex items-start gap-2">
-                    <span className="w-1.5 h-1.5 bg-[var(--text-brand)] rounded-full mt-2"></span>
-                    <span>End-to-end encryption (TLS 1.3 for data in transit, AES-256 for data at rest)</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="w-1.5 h-1.5 bg-[var(--text-brand)] rounded-full mt-2"></span>
-                    <span>Regular security assessments and penetration testing</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="w-1.5 h-1.5 bg-[var(--text-brand)] rounded-full mt-2"></span>
-                    <span>Multi-factor authentication and role-based access controls</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="w-1.5 h-1.5 bg-[var(--text-brand)] rounded-full mt-2"></span>
-                    <span>Automated backup and disaster recovery systems</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="w-1.5 h-1.5 bg-[var(--text-brand)] rounded-full mt-2"></span>
-                    <span>Intrusion detection and monitoring systems</span>
-                  </li>
+                  {[
+                    'Encryption for data transmission and storage where appropriate',
+                    'Authentication and access control mechanisms',
+                    'Role-based permissions and authorization controls',
+                    'Backup and recovery processes',
+                    'Security monitoring and logging systems',
+                    'Ongoing security reviews and improvements',
+                  ].map((measure, i) => (
+                    <li key={i} className="flex items-start gap-2">
+                      <span className="w-1.5 h-1.5 bg-[var(--text-brand)] rounded-full mt-2"></span>
+                      <span>{measure}</span>
+                    </li>
+                  ))}
                 </ul>
 
                 <h3 style={{ fontSize: 'var(--text-lg)' }} className="text-[var(--text-primary)] mb-3 mt-6">Organizational Measures</h3>
-                <ul style={{ fontSize: 'var(--text-base)' }} className="space-y-2 text-[var(--text-secondary)]">
-                  <li className="flex items-start gap-2">
-                    <span className="w-1.5 h-1.5 bg-[var(--text-brand)] rounded-full mt-2"></span>
-                    <span>Data Protection Impact Assessments (DPIAs) for high-risk processing</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="w-1.5 h-1.5 bg-[var(--text-brand)] rounded-full mt-2"></span>
-                    <span>Staff training on data protection and GDPR compliance</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="w-1.5 h-1.5 bg-[var(--text-brand)] rounded-full mt-2"></span>
-                    <span>Data processing agreements with all third-party processors</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="w-1.5 h-1.5 bg-[var(--text-brand)] rounded-full mt-2"></span>
-                    <span>Incident response and data breach notification procedures</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="w-1.5 h-1.5 bg-[var(--text-brand)] rounded-full mt-2"></span>
-                    <span>Regular policy reviews and compliance audits</span>
-                  </li>
+                <ul style={{ fontSize: 'var(--text-base)' }} className="space-y-2 text-[var(--text-secondary)] mb-4">
+                  {[
+                    'Internal privacy and security policies',
+                    'Staff awareness and training initiatives',
+                    'Vendor and third-party risk management practices',
+                    'Incident response procedures',
+                    'Documentation and governance processes',
+                    'Periodic review of security and privacy practices',
+                  ].map((measure, i) => (
+                    <li key={i} className="flex items-start gap-2">
+                      <span className="w-1.5 h-1.5 bg-[var(--text-brand)] rounded-full mt-2"></span>
+                      <span>{measure}</span>
+                    </li>
+                  ))}
                 </ul>
+                <p style={{ fontSize: 'var(--text-base)' }} className="text-[var(--text-secondary)] leading-relaxed">
+                  These measures are being strengthened over time as the platform scales.
+                </p>
               </section>
 
               <section>
                 <h2 style={{ fontSize: 'var(--text-xl)' }} className="text-[var(--text-primary)] mb-4">Data Transfers</h2>
                 <p style={{ fontSize: 'var(--text-base)' }} className="text-[var(--text-secondary)] leading-relaxed mb-4">
-                  When we transfer personal data outside the EEA, we ensure appropriate safeguards are in place:
+                  Thesisflow does not intentionally transfer or store institutional data outside its designated hosting infrastructure. Data is hosted using trusted third-party cloud service providers and is managed in accordance with institutional requirements, contractual obligations, and our ongoing privacy and security practices.
                 </p>
-                <ul style={{ fontSize: 'var(--text-base)' }} className="space-y-2 text-[var(--text-secondary)]">
-                  <li className="flex items-start gap-2">
-                    <span className="w-1.5 h-1.5 bg-[var(--text-brand)] rounded-full mt-2"></span>
-                    <span>Standard Contractual Clauses (SCCs) approved by the European Commission</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="w-1.5 h-1.5 bg-[var(--text-brand)] rounded-full mt-2"></span>
-                    <span>Adequacy decisions for transfers to approved countries</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="w-1.5 h-1.5 bg-[var(--text-brand)] rounded-full mt-2"></span>
-                    <span>Additional security measures as required by law</span>
-                  </li>
-                </ul>
+                <p style={{ fontSize: 'var(--text-base)' }} className="text-[var(--text-secondary)] leading-relaxed">
+                  Where cross-jurisdictional data processing is required, we seek to implement appropriate technical, contractual, and organizational safeguards consistent with customer requirements and applicable legal obligations.
+                </p>
               </section>
 
               <section>
@@ -212,22 +203,17 @@ export default function GDPR({ onNavigate }: any) {
                   We retain personal data only for as long as necessary to fulfill the purposes for which it was collected, comply with legal obligations, resolve disputes, and enforce our agreements. Specific retention periods are determined based on:
                 </p>
                 <ul style={{ fontSize: 'var(--text-base)' }} className="space-y-2 text-[var(--text-secondary)] mt-4">
-                  <li className="flex items-start gap-2">
-                    <span className="w-1.5 h-1.5 bg-[var(--text-brand)] rounded-full mt-2"></span>
-                    <span>Legal and regulatory requirements</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="w-1.5 h-1.5 bg-[var(--text-brand)] rounded-full mt-2"></span>
-                    <span>Institutional policies and requirements</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="w-1.5 h-1.5 bg-[var(--text-brand)] rounded-full mt-2"></span>
-                    <span>The nature and sensitivity of the data</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="w-1.5 h-1.5 bg-[var(--text-brand)] rounded-full mt-2"></span>
-                    <span>Potential risks from unauthorized use or disclosure</span>
-                  </li>
+                  {[
+                    'Legal and regulatory requirements',
+                    'Institutional policies and requirements',
+                    'The nature and sensitivity of the data',
+                    'Potential risks from unauthorized use or disclosure'
+                  ].map((item, i) => (
+                    <li key={i} className="flex items-start gap-2">
+                      <span className="w-1.5 h-1.5 bg-[var(--text-brand)] rounded-full mt-2"></span>
+                      <span>{item}</span>
+                    </li>
+                  ))}
                 </ul>
               </section>
 
@@ -237,46 +223,52 @@ export default function GDPR({ onNavigate }: any) {
                   In the event of a personal data breach that is likely to result in a risk to the rights and freedoms of individuals, we will:
                 </p>
                 <ul style={{ fontSize: 'var(--text-base)' }} className="space-y-2 text-[var(--text-secondary)] mt-4">
-                  <li className="flex items-start gap-2">
-                    <span className="w-1.5 h-1.5 bg-[var(--text-brand)] rounded-full mt-2"></span>
-                    <span>Notify the relevant supervisory authority within 72 hours of becoming aware</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="w-1.5 h-1.5 bg-[var(--text-brand)] rounded-full mt-2"></span>
-                    <span>Notify affected individuals without undue delay if there is a high risk to their rights</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="w-1.5 h-1.5 bg-[var(--text-brand)] rounded-full mt-2"></span>
-                    <span>Notify institutional administrators to enable them to fulfill their obligations</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="w-1.5 h-1.5 bg-[var(--text-brand)] rounded-full mt-2"></span>
-                    <span>Document all breaches, even if notification is not required</span>
-                  </li>
+                  {[
+                    'Investigate and assess the incident promptly',
+                    'Support notifications where required under applicable laws (including GDPR and DPDPA, where applicable)',
+                    'Inform institutional administrators where relevant',
+                    'Take reasonable steps toward mitigation and remediation',
+                    'Maintain internal records of security incidents'
+                  ].map((item, i) => (
+                    <li key={i} className="flex items-start gap-2">
+                      <span className="w-1.5 h-1.5 bg-[var(--text-brand)] rounded-full mt-2"></span>
+                      <span>{item}</span>
+                    </li>
+                  ))}
                 </ul>
               </section>
 
               <section>
                 <h2 style={{ fontSize: 'var(--text-xl)' }} className="text-[var(--text-primary)] mb-4">Children's Data</h2>
                 <p style={{ fontSize: 'var(--text-base)' }} className="text-[var(--text-secondary)] leading-relaxed">
-                  Thesisflow is intended for use by universities and their communities. Where processing involves children's data (under 16 years old), we require that institutions obtain appropriate consents and implement necessary safeguards in accordance with GDPR Article 8.
+                  Thesisflow is intended for use by universities and their communities. Where processing involves children's data (under 16 years old), we require that institutions obtain appropriate consents and implement necessary safeguards.
                 </p>
               </section>
 
               <section>
                 <h2 style={{ fontSize: 'var(--text-xl)' }} className="text-[var(--text-primary)] mb-4">Governing Law and Jurisdiction</h2>
                 <p style={{ fontSize: 'var(--text-base)' }} className="text-[var(--text-secondary)] leading-relaxed mb-4">
-                  While this document outlines our GDPR compliance measures applicable to EU data subjects, the interpretation and enforcement of this policy shall be governed by the laws of India. Any disputes arising from data processing activities shall be subject to the exclusive jurisdiction of the courts located in Chennai, Tamil Nadu, India, except where EU data subjects have rights under GDPR to bring actions in their local jurisdiction.
+                  While this document outlines our ongoing efforts toward GDPR and DPDPA alignment and reflects our current privacy engineering principles, the interpretation and enforcement of this policy shall be governed by the laws of India. Any disputes arising from data processing activities shall be subject to the exclusive jurisdiction of the courts located in Chennai, Tamil Nadu, India, unless otherwise required under applicable data protection laws.
                 </p>
                 <p style={{ fontSize: 'var(--text-base)' }} className="text-[var(--text-secondary)] leading-relaxed">
-                  <strong>Additional Agreements:</strong> More specific GDPR compliance procedures, data processing agreements, and security protocols are mutually agreed upon and documented in the Non-Disclosure Agreement (NDA) and Data Processing Agreement (DPA) signed with institutional customers to ensure the highest level of data protection and product quality.
+                  <strong>Additional Agreements:</strong> More specific GDPR and DPDPA compliance procedures, data processing agreements, and security protocols are mutually agreed upon and documented in the Non-Disclosure Agreement (NDA) and Data Processing Agreement (DPA) signed with institutional customers to ensure the highest level of data protection and product quality.
+                </p>
+              </section>
+
+              <section>
+                <h2 style={{ fontSize: 'var(--text-xl)' }} className="text-[var(--text-primary)] mb-4">Important Notice</h2>
+                <p style={{ fontSize: 'var(--text-base)' }} className="text-[var(--text-secondary)] leading-relaxed mb-4">
+                  This document describes our current privacy engineering approach and regulatory alignment efforts. It does not represent full compliance certification under GDPR, DPDPA, or any other regulation.
+                </p>
+                <p style={{ fontSize: 'var(--text-base)' }} className="text-[var(--text-secondary)] leading-relaxed">
+                  We are actively working toward stronger alignment and continuously improving our systems, policies, and safeguards as the platform evolves.
                 </p>
               </section>
 
               <section>
                 <h2 style={{ fontSize: 'var(--text-xl)' }} className="text-[var(--text-primary)] mb-4">Contact Our Data Protection Officer</h2>
                 <p style={{ fontSize: 'var(--text-base)' }} className="text-[var(--text-secondary)] leading-relaxed mb-4">
-                  For any GDPR-related questions, to exercise your rights, or to raise concerns, please contact:
+                  For any compliance-related questions, to exercise your rights, or to raise concerns, please contact:
                 </p>
                 <div className="bg-[var(--card)] border border-[var(--border-primary)] rounded-xl p-6">
                   <p style={{ fontSize: 'var(--text-base)' }} className="text-[var(--text-secondary)] mb-2"><strong>Email:</strong> admin@migritech.com</p>

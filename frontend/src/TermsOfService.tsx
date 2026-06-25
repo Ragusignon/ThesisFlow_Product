@@ -50,7 +50,7 @@ export default function TermsOfService({ onNavigate }: any) {
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="w-1.5 h-1.5 bg-[var(--text-brand)] rounded-full mt-2"></span>
-                    <span>Integration capabilities with existing institutional systems</span>
+                    <span>Integration capabilities with existing institutional systems (where applicable)</span>
                   </li>
                 </ul>
               </section>
@@ -153,7 +153,7 @@ export default function TermsOfService({ onNavigate }: any) {
                   <strong>Your Data:</strong> You and your authorized users retain all intellectual property rights in the content you submit to Thesisflow, including thesis documents, comments, and other materials ("Customer Data"). We do not claim ownership of Customer Data.
                 </p>
                 <p style={{ fontSize: 'var(--text-base)' }} className="text-[var(--text-secondary)] leading-relaxed mb-4">
-                  <strong>Limited License to Us:</strong> You grant us a limited license to host, store, process, and transmit Customer Data solely to provide and improve the service. This includes making necessary copies for backup and disaster recovery purposes.
+                  <strong>Service Access License:</strong> You grant us a limited, revocable license to host, store, process, access, and transmit Customer Data solely to provide, maintain, and improve the service, including support, updates (when authorized by the institution), and necessary backup and disaster recovery copies.
                 </p>
                 <p style={{ fontSize: 'var(--text-base)' }} className="text-[var(--text-secondary)] leading-relaxed">
                   <strong>Aggregated Data:</strong> We may create anonymized, aggregated statistical data from Customer Data for analytics, research, and service improvement purposes. This data will not identify your institution or individual users.
@@ -189,16 +189,16 @@ export default function TermsOfService({ onNavigate }: any) {
               </section>
 
               <section>
-                <h2 style={{ fontSize: 'var(--text-xl)' }} className="text-[var(--text-primary)] mb-4">8. Service Level Agreement</h2>
+                <h2 style={{ fontSize: 'var(--text-xl)' }} className="text-[var(--text-primary)] mb-4">8. Service Availability</h2>
                 <p style={{ fontSize: 'var(--text-base)' }} className="text-[var(--text-secondary)] leading-relaxed">
-                  We strive to maintain 99.9% uptime for the service, excluding scheduled maintenance. Specific SLA terms, including uptime guarantees and remedies, are detailed in your institutional subscription agreement. We will provide advance notice of scheduled maintenance when possible.
+                  We aim to maintain reliable service availability and may perform scheduled maintenance from time to time. Specific uptime commitments, if any, are defined in your institutional subscription agreement.
                 </p>
               </section>
 
               <section>
                 <h2 style={{ fontSize: 'var(--text-xl)' }} className="text-[var(--text-primary)] mb-4">9. Privacy and Data Protection</h2>
                 <p style={{ fontSize: 'var(--text-base)' }} className="text-[var(--text-secondary)] leading-relaxed">
-                  Our collection and use of personal information is governed by our Privacy Policy. We are committed to GDPR, FERPA, and other applicable data protection regulations. We implement appropriate technical and organizational measures to protect Customer Data.
+                  Your use of the service is also governed by our Privacy Policy. We design the platform with privacy and security considerations in mind and aim to support applicable data protection requirements relevant to educational and institutional environments.
                 </p>
               </section>
 
@@ -211,7 +211,7 @@ export default function TermsOfService({ onNavigate }: any) {
                   <strong>By Us:</strong> We may suspend or terminate your access immediately if you breach these Terms, fail to pay fees, or for other material violations. We will provide notice when reasonably possible.
                 </p>
                 <p style={{ fontSize: 'var(--text-base)' }} className="text-[var(--text-secondary)] leading-relaxed">
-                  <strong>Effect of Termination:</strong> Upon termination, your access will cease. You will have 30 days to export your Customer Data. After this period, we may delete Customer Data in accordance with our data retention policies.
+                  <strong>Effect of Termination:</strong> Upon termination, access to the service will be disabled. Data export or retention terms will be governed by the institutional agreement.
                 </p>
               </section>
 
@@ -297,7 +297,7 @@ export default function TermsOfService({ onNavigate }: any) {
                   For questions about these Terms, please contact:
                 </p>
                 <div className="bg-[var(--card)] border border-[var(--border-primary)] rounded-xl p-6">
-                  <p style={{ fontSize: 'var(--text-base)' }} className="text-[var(--text-secondary)] mb-2"><strong>Email:</strong> admin@migritech.com</p>
+                  <p style={{ fontSize: 'var(--text-base)' }} className="text-[var(--text-secondary)] mb-2"><strong>Email:</strong> admin@MIGRItech.com</p>
                   <p style={{ fontSize: 'var(--text-base)' }} className="text-[var(--text-secondary)]"><strong>Company:</strong> MIGRI Technologies</p>
                 </div>
               </section>
