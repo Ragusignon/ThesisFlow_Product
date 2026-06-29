@@ -810,27 +810,27 @@ function Confirmation({ selectedDate, selectedTime, formData, onBack }: any) {
       transition={{ duration: 0.6 }}
       className="max-w-2xl mx-auto"
     >
-      <div className="bg-white border border-gray-200/40 rounded-2xl p-8 lg:p-12 text-center">
+      <div className="bg-[var(--card)] border border-[var(--border-primary)] rounded-2xl p-8 lg:p-12 text-center">
         {/* Success Icon */}
         <div className="w-20 h-20 bg-gradient-to-br from-[#00A7A5]/10 to-[#00A7A5]/5 rounded-full flex items-center justify-center mx-auto mb-6">
           <CheckCircle2 className="w-10 h-10 text-[#00A7A5]" />
         </div>
 
-        <h3 className="text-3xl text-gray-900 mb-4">Demo Scheduled!</h3>
-        <p className="text-lg text-gray-600 mb-8">
+        <h3 className="text-3xl text-[var(--text-primary)] mb-4">Demo Scheduled!</h3>
+        <p className="text-lg text-[var(--text-secondary)] mb-8">
           We've sent a confirmation email to <span className="text-[#00A7A5]">{formData.email}</span>
         </p>
 
         {/* Booking Details */}
-        <div className="bg-gradient-to-br from-[#f0fafa]/50 to-white border border-gray-200/40 rounded-xl p-6 mb-8 text-left">
-          <h4 className="text-lg text-gray-900 mb-4">Your Demo Details</h4>
+        <div className="bg-[var(--bg-brand-subtle)] border border-[var(--border-brand-subtle)] rounded-xl p-6 mb-8 text-left">
+          <h4 className="text-lg text-[var(--text-primary)] mb-4">Your Demo Details</h4>
           
-          <div className="space-y-3 text-gray-600">
+          <div className="space-y-3 text-[var(--text-secondary)]">
             <div className="flex items-start gap-3">
               <Calendar className="w-5 h-5 text-[#00A7A5] mt-0.5" />
               <div>
-                <div className="text-sm text-gray-500">Date & Time</div>
-                <div className="text-gray-900">
+                <div className="text-sm text-[var(--text-tertiary)]">Date & Time</div>
+                <div className="text-[var(--text-primary)]">
                   {selectedDate?.toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}
                   {' at '}{selectedTime}
                 </div>
@@ -840,25 +840,25 @@ function Confirmation({ selectedDate, selectedTime, formData, onBack }: any) {
             <div className="flex items-start gap-3">
               <Building2 className="w-5 h-5 text-[#00A7A5] mt-0.5" />
               <div>
-                <div className="text-sm text-gray-500">Institution</div>
-                <div className="text-gray-900">{formData.institutionName}</div>
+                <div className="text-sm text-[var(--text-tertiary)]">Institution</div>
+                <div className="text-[var(--text-primary)]">{formData.institutionName}</div>
               </div>
             </div>
 
             <div className="flex items-start gap-3">
               <User className="w-5 h-5 text-[#00A7A5] mt-0.5" />
               <div>
-                <div className="text-sm text-gray-500">Contact Person</div>
-                <div className="text-gray-900">{formData.fullName}</div>
-                <div className="text-sm text-gray-500">{formData.role}</div>
+                <div className="text-sm text-[var(--text-tertiary)]">Contact Person</div>
+                <div className="text-[var(--text-primary)]">{formData.fullName}</div>
+                <div className="text-sm text-[var(--text-tertiary)]">{formData.role}</div>
               </div>
             </div>
 
             <div className="flex items-start gap-3">
               <Clock className="w-5 h-5 text-[#00A7A5] mt-0.5" />
               <div>
-                <div className="text-sm text-gray-500">Timezone & Country</div>
-                <div className="text-gray-900">
+                <div className="text-sm text-[var(--text-tertiary)]">Timezone & Country</div>
+                <div className="text-[var(--text-primary)]">
                   {formData.timezone && formData.country 
                     ? `${formData.timezone} • ${formData.country}`
                     : formData.timezone || formData.country || 'Not specified'}
@@ -869,15 +869,15 @@ function Confirmation({ selectedDate, selectedTime, formData, onBack }: any) {
             <div className="flex items-start gap-3">
               <Users className="w-5 h-5 text-[#00A7A5] mt-0.5" />
               <div>
-                <div className="text-sm text-gray-500">Expected Attendees</div>
-                <div className="text-gray-900">{formData.attendees} people</div>
+                <div className="text-sm text-[var(--text-tertiary)]">Expected Attendees</div>
+                <div className="text-[var(--text-primary)]">{formData.attendees} people</div>
               </div>
             </div>
 
             <div className="flex items-start gap-3">
               <Video className="w-5 h-5 text-[#00A7A5] mt-0.5" />
               <div>
-                <div className="text-sm text-gray-500">Meeting Link</div>
+                <div className="text-sm text-[var(--text-tertiary)]">Meeting Link</div>
                 <div className="text-[#00A7A5]">Sent to your email</div>
               </div>
             </div>
@@ -885,9 +885,9 @@ function Confirmation({ selectedDate, selectedTime, formData, onBack }: any) {
         </div>
 
         {/* Next Steps */}
-        <div className="bg-white border border-[#00A7A5]/20 rounded-xl p-6 mb-8 text-left">
-          <h4 className="text-lg text-gray-900 mb-4">What Happens Next?</h4>
-          <ul className="space-y-3 text-gray-600">
+        <div className="bg-[var(--card)] border border-[#00A7A5]/20 rounded-xl p-6 mb-8 text-left">
+          <h4 className="text-lg text-[var(--text-primary)] mb-4">What Happens Next?</h4>
+          <ul className="space-y-3 text-[var(--text-secondary)]">
             <li className="flex items-start gap-3">
               <CheckCircle2 className="w-5 h-5 text-[#00A7A5] mt-0.5 flex-shrink-0" />
               <span>You'll receive a calendar invite with the video conference link</span>
@@ -924,8 +924,8 @@ function Confirmation({ selectedDate, selectedTime, formData, onBack }: any) {
         </div>
 
         {/* Support */}
-        <div className="mt-8 pt-8 border-t border-gray-200/40">
-          <p className="text-sm text-gray-500">
+        <div className="mt-8 pt-8 border-t border-[var(--border-primary)]">
+          <p className="text-sm text-[var(--text-tertiary)]">
             Need to reschedule or have questions?{' '}
             <a href="mailto:contact@thesisflow.com" className="text-[#00A7A5] hover:underline">
               Contact our team
